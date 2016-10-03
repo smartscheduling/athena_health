@@ -23,6 +23,7 @@ module AthenaHealth
     attribute :scheduledby,                 String
     attribute :scheduleddatetime,           String
     attribute :starttime,                   String
+    attribute :suggestedoverbooking,        Integer
     attribute :templateappointmentid,       Integer
     attribute :urgent,                      Boolean
 
