@@ -73,5 +73,15 @@ describe AthenaHealth::Error do
         )
       end
     end
+
+    context 'when response code is unexpected' do
+      let(:code) { 999 }
+
+      it 'should raise an error with the code' do
+        expect { error.render }.to raise_error(
+          "Unknown Error: 999"
+        )
+      end
+    end
   end
 end
