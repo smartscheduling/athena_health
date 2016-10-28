@@ -30,7 +30,11 @@ module AthenaHealth
     end
 
     def render
-      fail ERROR_TYPES[@code]
+      if type = ERROR_TYPES[@code]
+        fail type
+      else
+        fail "Unknown Error: #{@code}"
+      end
     end
   end
 end
